@@ -9,6 +9,7 @@ Early detection of liver disease is crucial for timely medical intervention. Thi
 ---
 
 ## Project Structure
+```
 Liver Disease Prediction/
 │
 ├── app/
@@ -32,6 +33,7 @@ Liver Disease Prediction/
 ├── indian_liver_patient.csv      # Original dataset from Kaggle
 ├── cleaned_indian_liver_patient.csv  # Cleaned version after preprocessing
 └── README.md
+```
 ---
 
 ---
@@ -211,3 +213,15 @@ Explaining predictions (via LIME) is crucial in sensitive domains like healthcar
 Deployment requires more than a good model: usability and interpretability are key.
 
 ---
+
+## Screenshots
+
+**1. Input Form**  
+![Form Input](images/form.png)
+
+**2. Model Metrics**  
+![Model Metrics](images/metrics.png)
+
+**3. Prediction Result**  
+![Prediction Result](images/prediction.png)
+
