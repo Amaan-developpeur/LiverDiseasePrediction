@@ -38,7 +38,7 @@ Liver Disease Prediction/
 
 ---
 
-## 📊 Workflow Summary
+## Workflow Summary
 
 ### 1. Exploratory Data Analysis & Baseline Modeling
 
@@ -50,8 +50,8 @@ Notebook: `notebooks/ExplorationAndBaselineModel.ipynb`
   - Null value analysis  
   - Correlation heatmaps  
   - Feature distributions by gender and class  
-  - Baseline models: Logistic Regression, Random Forest, SVM  
-- **Insight:** Initial model performance was limited due to noisy and mislabeled data.
+  - Baseline models: DecisionTreeClassfier
+- **Insight:** Initial model performance was limited due to noisy and mislabeled and Unbala data.
 
 ### 2. Data Cleaning and Integrity Check
 
@@ -61,7 +61,6 @@ Notebook: `notebooks/DataPreparation.ipynb`
 - Feature engineering steps:  
   - Converted `Dataset` from {1, 2} to {1, 0}  
   - One-hot encoding for `Gender`  
-  - Removed outliers for numerical stability  
 - Exported cleaned dataset: `cleaned_indian_liver_patient.csv`
 
 ### 3. Final Modeling and Evaluation
@@ -78,7 +77,7 @@ Notebook: `notebooks/FinalCode.ipynb`
 
 ---
 
-## 🧠 Model Interpretability (LIME)
+## Model Interpretability (LIME)
 
 - Used **LIME (Local Interpretable Model-agnostic Explanations)** to explain individual predictions.  
 - Integrated into `main.py` to generate local explanation plots for user inputs.  
@@ -88,7 +87,7 @@ Notebook: `notebooks/FinalCode.ipynb`
 
 ---
 
-## 🚀 Deployment (FastAPI App)
+## Deployment (FastAPI App)
 
 - **Directory:** `app/`  
 - **Frontend:** HTML templates:  
@@ -100,7 +99,7 @@ Notebook: `notebooks/FinalCode.ipynb`
   - Accepts user input and returns prediction with probability and explanation  
   - Serves evaluation metrics on demand  
 
-### 🔧 Run the app locally
+### Run the app locally
 
 ```bash
 cd app
@@ -109,7 +108,7 @@ uvicorn main:app --reload
 
 ---
 
-## 📊 Workflow Summary
+## Workflow Summary
 
 ### 1. Exploratory Data Analysis & Baseline Modeling
 
@@ -149,7 +148,7 @@ Notebook: `notebooks/FinalCode.ipynb`
 
 ---
 
-## 🧠 Model Interpretability (LIME)
+## Model Interpretability (LIME)
 
 - Used **LIME (Local Interpretable Model-agnostic Explanations)** to explain individual predictions.  
 - Integrated into `main.py` to generate local explanation plots for user inputs.  
@@ -159,7 +158,7 @@ Notebook: `notebooks/FinalCode.ipynb`
 
 ---
 
-## 🚀 Deployment (FastAPI App)
+## Deployment (FastAPI App)
 
 - **Directory:** `app/`  
 - **Frontend:** HTML templates:  
@@ -171,7 +170,7 @@ Notebook: `notebooks/FinalCode.ipynb`
   - Accepts user input and returns prediction with probability and explanation  
   - Serves evaluation metrics on demand  
 
-### 🔧 Run the app locally
+### Run the app locally
 
 ```bash
 cd app
