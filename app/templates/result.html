@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liver Disease Prediction Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans p-6 min-h-screen">
+    <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h1 class="text-2xl font-bold mb-4 text-blue-400">Prediction Result</h1>
+
+        <div class="mb-6 text-gray-200">
+            <p><span class="font-semibold">Prediction:</span> {{ prediction }}</p>
+            <p><span class="font-semibold">Confidence:</span> {{ confidence }}</p>
+        </div>
+        <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg relative">
+    <a href="/metrics" class="absolute top-6 right-6 text-sm text-blue-400 hover:underline">
+        View Model Evaluation
+    </a>
+
+    <h1 class="text-2xl font-bold mb-4 text-blue-400">Prediction Result</h1>
+    <!-- Rest of your content -->
+</div>
+
+        <h2 class="text-xl font-semibold text-gray-300 mb-2">Input Values</h2>
+        <ul class="grid grid-cols-2 gap-4 mb-6 text-gray-200">
+            {% for key, value in input_data.items() %}
+                <li><span class="font-medium">{{ key.replace("_", " ") }}:</span> {{ value }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2 class="text-xl font-semibold text-gray-300 mb-2">LIME Explanation</h2>
+        <canvas id="limeChart" width="400" height="300"></canvas>
+    </div>
+
+    <pre class="text-gray-400 mt-4">
+Labels: {{ lime_explanation | map(attribute=0) | list }}
+Values: {{ lime_explanation | map(attribute=1) | list }}
+</pre>
+
+    <script>
+        const labels = {{ lime_explanation | map(attribute=0) | list | safe }};
+        const values = {{ lime_explanation | map(attribute=1) | list | safe }};
+
+        const ctx = document.getElementById('limeChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Feature Contribution',
+                    data: values,
+                    backgroundColor: values.map(v => v >= 0 ? 'rgba(34, 197, 94, 0.7)' : 'rgba(239, 68, 68, 0.7)'),
+                    borderColor: values.map(v => v >= 0 ? 'rgba(34, 197, 94, 1)' : 'rgba(239, 68, 68, 1)'),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: context => `Contribution: ${context.parsed.x.toFixed(4)}`
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Impact on Prediction',
+                            color: '#e2e8f0'
+                        },
+                        ticks: { color: '#cbd5e1' },
+                        grid: { color: '#334155' }
+                    },
+                    y: {
+                        ticks: {
+                            color: '#cbd5e1',
+                            callback: val => val.length > 25 ? val.slice(0, 25) + "..." : val
+                        },
+                        grid: { color: '#334155' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

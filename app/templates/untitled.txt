@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Evaluation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 p-8 min-h-screen font-sans">
+    <div class="max-w-5xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h1 class="text-2xl font-bold text-blue-400 mb-6">Model Evaluation Metrics</h1>
+
+        <h2 class="text-xl font-semibold mb-4 text-gray-200">Confusion Matrix</h2>
+        <div class="overflow-x-auto bg-gray-700 rounded p-4 mb-6 text-sm text-gray-100">
+            {{ confusion_matrix | safe }}
+        </div>
+
+        <h2 class="text-xl font-semibold mb-4 text-gray-200">Classification Report</h2>
+        <div class="overflow-x-auto bg-gray-700 rounded p-4 text-sm text-gray-100">
+            {{ classification_report | safe }}
+        </div>
+
+        <div class="mt-8">
+            <a href="/" class="text-blue-500 hover:underline">← Back to Prediction</a>
+        </div>
+    </div>
+</body>
+</html>

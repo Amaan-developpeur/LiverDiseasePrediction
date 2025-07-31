@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.joblib
+
+# Notebooks checkpoints
+.ipynb_checkpoints
+
+# Virtual environment
+env/
+venv/
+ENV/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code or IDE configs
+.vscode/
+
+# OS generated
+*.swp
+*.swo
+
+# Pycache
+*.log
+
+# FastAPI cache
+__pycache__/
