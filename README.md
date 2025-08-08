@@ -70,10 +70,8 @@ Notebook: `notebooks/FinalCode.ipynb`
 - Applied **SMOTEN** to address class imbalance in categorical features.  
 - Trained multiple classifiers; selected **AdaBoostClassifier** based on evaluation metrics.  
 - Evaluation included:  
-  - Accuracy  
-  - Precision, Recall, F1-score  
+  - classification report  
   - Confusion Matrix  
-  - ROC-AUC (optional)
 
 ---
 
@@ -140,12 +138,6 @@ Notebook: `notebooks/FinalCode.ipynb`
 
 - Applied **SMOTEN** to address class imbalance in categorical features.  
 - Trained multiple classifiers; selected **AdaBoostClassifier** based on evaluation metrics.  
-- Evaluation included:  
-  - Accuracy  
-  - Precision, Recall, F1-score  
-  - Confusion Matrix  
-  - ROC-AUC (optional)
-
 ---
 
 ## Model Interpretability (LIME)
