@@ -1,0 +1,32 @@
+# Name of the File
+name: Lint
+
+# Defining on which events the workflow should trigger
+on: [push, pull_request]
+
+# Defining the Jobs
+jobs:
+  lint:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Cloning the repository
+        uses: actions/checkout@v4
+
+      - name: Installing Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8==7.* black==24.* isort==5.*
+
+      - name: Run Flake8
+        run: flake8 .
+
+      - name: Check Black formatting
+        run: black --check .
+
+      - name: Check isort formatting
+        run: isort --check-only .

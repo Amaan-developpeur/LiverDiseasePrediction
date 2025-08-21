@@ -2,9 +2,6 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-import imblearn
-from imblearn.pipeline import Pipeline
-from imblearn.over_sampling import SMOTEN
 
 
 import joblib
@@ -45,7 +42,9 @@ cm = confusion_matrix(y_test, y_pred)
 report = classification_report(y_test, y_pred, output_dict=True)
 
 # Convert to DataFrame for rendering
-cm_df = pd.DataFrame(cm, index=["Actual [No Liver Disease]", "Actual [Liver Disease]"], columns=["Predicted [No Liver Disease]", "Predicted [Liver Disease]"])
+cm_df = pd.DataFrame(
+    cm, index=["Actual [No Liver Disease]", "Actual [Liver Disease]"], columns=["Predicted [No Liver Disease]", "Predicted [Liver Disease]"]
+    )
 report_df = pd.DataFrame(report).transpose()
 
 # Setup LIME explainer
@@ -57,14 +56,16 @@ explainer = LimeTabularExplainer(
     discretize_continuous=True
 )
 
-# --- Routes ---
 
+
+# --- Routes ---
 @app.get("/", response_class=HTMLResponse)
 async def form_get(request: Request):
     return templates.TemplateResponse("form.html", {
         "request": request,
         "features": feature_names
     })
+
 
 @app.post("/predict", response_class=HTMLResponse)
 async def predict(request: Request):
@@ -97,6 +98,8 @@ async def predict(request: Request):
         "lime_explanation": explanation.as_list(),
         "input_data": dict(zip(feature_names, input_data))
     })
+
+
 
 @app.get("/metrics", response_class=HTMLResponse)
 async def show_metrics(request: Request):
