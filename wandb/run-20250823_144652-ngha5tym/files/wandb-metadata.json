@@ -1,0 +1,28 @@
+{
+  "os":  "Windows-11-10.0.26100-SP0",
+  "python":  "CPython 3.12.3",
+  "startedAt":  "2025-08-23T09:16:52.048060Z",
+  "program":  "C:\\Users\\DELL\\Data Science\\Machine Learning\\Supervised Learning\\Capstone Projects\\Liver Disease Prediction\\scripts\\model_rf.py",
+  "codePath":  "scripts\\model_rf.py",
+  "codePathLocal":  "scripts\\model_rf.py",
+  "git":  {
+    "remote":  "https://github.com/Amaan-developpeur/LiverDiseasePrediction.git",
+    "commit":  "02279354cf369bd8cc14e39eb372f9934d65a3dc"
+  },
+  "email":  "mohammedamaanb@gmail.com",
+  "root":  "C:\\Users\\DELL\\Data Science\\Machine Learning\\Supervised Learning\\Capstone Projects\\Liver Disease Prediction",
+  "host":  "DESKTOP-PPVAFCT",
+  "executable":  "C:\\Users\\DELL\\anaconda3\\python.exe",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "161183641600",
+      "used":  "150840172544"
+    }
+  },
+  "memory":  {
+    "total":  "8448106496"
+  },
+  "writerId":  "42g7e6q0z93a4rj9y1o0e9kqsk6e5dku"
+}

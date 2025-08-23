@@ -1,0 +1,28 @@
+{
+  "os":  "Windows-11-10.0.26100-SP0",
+  "python":  "CPython 3.12.3",
+  "startedAt":  "2025-08-23T09:52:35.601452Z",
+  "program":  "C:\\Users\\DELL\\Data Science\\Machine Learning\\Supervised Learning\\Capstone Projects\\Liver Disease Prediction\\scripts\\model_ada.py",
+  "codePath":  "scripts\\model_ada.py",
+  "codePathLocal":  "scripts\\model_ada.py",
+  "git":  {
+    "remote":  "https://github.com/Amaan-developpeur/LiverDiseasePrediction.git",
+    "commit":  "4182a9c405bca05ce483e4cebce0712af317c154"
+  },
+  "email":  "mohammedamaanb@gmail.com",
+  "root":  "C:\\Users\\DELL\\Data Science\\Machine Learning\\Supervised Learning\\Capstone Projects\\Liver Disease Prediction",
+  "host":  "DESKTOP-PPVAFCT",
+  "executable":  "C:\\Users\\DELL\\anaconda3\\python.exe",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "161183641600",
+      "used":  "150871543808"
+    }
+  },
+  "memory":  {
+    "total":  "8448106496"
+  },
+  "writerId":  "fy7k8gtj9e14btl70ryginws2imf3796"
+}

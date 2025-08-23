@@ -1,0 +1,50 @@
+_wandb:
+    value:
+        cli_version: 0.21.1
+        e:
+            sbrvim2qce2hafh5w5zfb2qz22r2551s:
+                codePath: scripts\model_ada.py
+                codePathLocal: scripts\model_ada.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "161183641600"
+                        used: "150819299328"
+                email: mohammedamaanb@gmail.com
+                executable: C:\Users\DELL\anaconda3\python.exe
+                git:
+                    commit: 02279354cf369bd8cc14e39eb372f9934d65a3dc
+                    remote: https://github.com/Amaan-developpeur/LiverDiseasePrediction.git
+                host: DESKTOP-PPVAFCT
+                memory:
+                    total: "8448106496"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\DELL\Data Science\Machine Learning\Supervised Learning\Capstone Projects\Liver Disease Prediction\scripts\model_ada.py
+                python: CPython 3.12.3
+                root: C:\Users\DELL\Data Science\Machine Learning\Supervised Learning\Capstone Projects\Liver Disease Prediction
+                startedAt: "2025-08-23T09:27:20.853448Z"
+                writerId: sbrvim2qce2hafh5w5zfb2qz22r2551s
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 5
+                - 53
+                - 105
+            "2":
+                - 5
+                - 53
+                - 105
+            "3":
+                - 19
+            "4": 3.12.3
+            "5": 0.21.1
+            "8":
+                - 3
+            "12": 0.21.1
+            "13": windows-amd64
+learning_rate:
+    value: 1
+n_estimators:
+    value: 250

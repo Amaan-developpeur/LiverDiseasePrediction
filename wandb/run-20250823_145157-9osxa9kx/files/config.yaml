@@ -1,0 +1,50 @@
+_wandb:
+    value:
+        cli_version: 0.21.1
+        e:
+            x2j16yp26nxli70uzc523co2ejbnv4fs:
+                codePath: scripts\model_rf.py
+                codePathLocal: scripts\model_rf.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "161183641600"
+                        used: "150823460864"
+                email: mohammedamaanb@gmail.com
+                executable: C:\Users\DELL\anaconda3\python.exe
+                git:
+                    commit: 02279354cf369bd8cc14e39eb372f9934d65a3dc
+                    remote: https://github.com/Amaan-developpeur/LiverDiseasePrediction.git
+                host: DESKTOP-PPVAFCT
+                memory:
+                    total: "8448106496"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\DELL\Data Science\Machine Learning\Supervised Learning\Capstone Projects\Liver Disease Prediction\scripts\model_rf.py
+                python: CPython 3.12.3
+                root: C:\Users\DELL\Data Science\Machine Learning\Supervised Learning\Capstone Projects\Liver Disease Prediction
+                startedAt: "2025-08-23T09:21:57.566417Z"
+                writerId: x2j16yp26nxli70uzc523co2ejbnv4fs
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 5
+                - 53
+                - 105
+            "2":
+                - 5
+                - 53
+                - 105
+            "3":
+                - 19
+            "4": 3.12.3
+            "5": 0.21.1
+            "8":
+                - 3
+            "12": 0.21.1
+            "13": windows-amd64
+max_depth:
+    value: 5
+n_estimators:
+    value: 100

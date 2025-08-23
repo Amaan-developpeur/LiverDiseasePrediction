@@ -1,15 +1,14 @@
+from pathlib import Path
+
+import joblib
+import numpy as np
+import pandas as pd
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-
-import joblib
-import numpy as np
 from lime.lime_tabular import LimeTabularExplainer
-from pathlib import Path
-
 from sklearn.metrics import classification_report, confusion_matrix
-import pandas as pd
 
 # --- Setup ---
 app = FastAPI(title="Liver Disease Prediction Using Machine Learning")
@@ -49,6 +48,7 @@ explainer = LimeTabularExplainer(
     mode="classification",
     discretize_continuous=True,
 )
+
 
 # --- Routes ---
 @app.get("/", response_class=HTMLResponse)
