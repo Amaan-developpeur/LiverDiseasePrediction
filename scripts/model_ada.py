@@ -45,7 +45,10 @@ def train_ada_model(cleaned_indian_liver_patient):
 
     wandb.log({"recall": recall})
     joblib.dump(ada_model, MODEL_DIR / "ada_model.pkl")
-    wandb.save(str(MODEL_DIR / "ada_model.pkl"))
+    artifact = wandb.Artifact(name="ada_model", type="model")
+    artifact.add_file(MODEL_DIR / "ada_model.pkl")
+    wandb.log_artifact(artifact)
+
 
 if __name__ == "__main__":
     train_ada_model("cleaned_indian_liver_patient.csv")

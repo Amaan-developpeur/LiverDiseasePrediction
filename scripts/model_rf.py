@@ -45,7 +45,11 @@ def train_rf_model(cleaned_indian_liver_patient):
 
     wandb.log({"recall": recall})
     joblib.dump(rf_model, MODEL_DIR / "rf_model.pkl")
-    wandb.save(str(MODEL_DIR / "rf_model.pkl"))
+    # Log model as an artifact
+    artifact = wandb.Artifact(name="rf_model", type="model")
+    artifact.add_file(MODEL_DIR / "rf_model.pkl")
+    wandb.log_artifact(artifact)
+
 
 if __name__ == "__main__":
     train_rf_model("cleaned_indian_liver_patient.csv")
